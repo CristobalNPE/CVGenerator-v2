@@ -1,6 +1,7 @@
 import { Heading } from "@/components/typography/Heading";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -14,12 +15,16 @@ function Home() {
           Tu documento listo en minutos, en un formato elegante
         </Heading>
       </section>
-      <Button
-        size={"lg"}
-        className="w-full md:w-fit md:text-md md:py-6 md:px-12"
+
+      <Link
+        className={`${buttonVariants({
+          variant: "default",
+        })} w-full md:w-fit md:text-md md:py-6 md:px-12`}
+        to={"/size"}
       >
-        <Sparkles className="mr-2" /> Comenzar!
-      </Button>
+        {" "}
+        <Sparkles className="mr-2" strokeWidth={2} /> Comenzar!
+      </Link>
     </main>
   );
 }
