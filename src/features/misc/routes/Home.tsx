@@ -8,10 +8,10 @@ function Home() {
       <section>
         <Heading className="mb-3">
           Crea tu <span className="text-primary">Currículum Vitae</span> con
-          facilidad.
+          facilidad
         </Heading>
         <Heading variant="h3">
-          Tu documento listo en minutos, en un formato elegante.
+          Tu documento listo en minutos, en un formato elegante
         </Heading>
       </section>
       <Button
