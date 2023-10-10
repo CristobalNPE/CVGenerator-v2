@@ -1,4 +1,5 @@
 import { Heading } from "@/components/typography/Heading";
+import { Badge } from "@/components/ui/badge";
 
 function SizeSelection() {
   return (
@@ -6,17 +7,17 @@ function SizeSelection() {
       <article className="flex gap-10 mb-10 justify-around items-center w-full sm:max-w-sm">
         <section className="opacity-40 text-md">
           <div className="text-2xl font-semibold">0</div>
-          <p>Inicio</p>
+          <Badge variant={"outline"}>Inicio</Badge>
         </section>
 
         <section className="text-lg ">
           <div className="text-3xl font-black">1</div>
-          <p className="font-semibold text-primary">Formato</p>
+          <Badge>Formato</Badge>
         </section>
 
         <section className="opacity-40  text-md ">
           <div className="text-2xl font-semibold">2</div>
-          <p>Plantilla</p>
+          <Badge variant={"outline"} >Plantilla</Badge>
         </section>
       </article>
 
