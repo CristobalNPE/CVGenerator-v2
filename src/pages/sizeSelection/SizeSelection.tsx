@@ -1,30 +1,57 @@
+import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
-import { Badge } from "@/components/ui/badge";
-
+import { buttonVariants } from "@/components/ui/button";
+import { ArrowRight, Newspaper } from "lucide-react";
+import { Link } from "react-router-dom";
+import SelectionCards from "./components/SelectionCards/SelectionCards";
+import { SelectionCardProps } from "./components/SelectionCards/SelectionCard";
 function SizeSelection() {
+  const cards: SelectionCardProps[] = [
+    {
+      title: "A4",
+      description:
+        "Para un currículum profesional estándar con formato internacional, perfecto para oportunidades laborales globales.",
+      recommended: true,
+      subtitle: "210mm x 297mm",
+    },
+    {
+      title: "Carta",
+      description:
+        "Un currículum con un formato que se adapta a las normas de países norteamericanos.",
+      subtitle: "216mm x 279mm",
+    },
+    {
+      title: "Oficio",
+      description:
+        "Formato de hoja larga utilizado comúnmente en países de Sudamérica.",
+      subtitle: "216mm x 330mm",
+    },
+  ];
+
+
+  //Control selected cards here. If none selected, disable next button.
+
+
   return (
     <main className="p-4 text-center flex flex-col  items-center w-full  ">
-      <article className="flex gap-10 mb-10 justify-around items-center w-full sm:max-w-sm">
-        <section className="opacity-40 text-md">
-          <div className="text-2xl font-semibold">0</div>
-          <Badge variant={"outline"}>Inicio</Badge>
-        </section>
+      <Stepper />
+      <Heading variant={"h2"}>Que formatos de papel preparamos?</Heading>
 
-        <section className="text-lg ">
-          <div className="text-3xl font-black">1</div>
-          <Badge>Formato</Badge>
-        </section>
+      <SelectionCards
+        cards={cards}
+        icon={<Newspaper size={48} strokeWidth={1.25} />}
+      />
 
-        <section className="opacity-40  text-md ">
-          <div className="text-2xl font-semibold">2</div>
-          <Badge variant={"outline"} >Plantilla</Badge>
-        </section>
-      </article>
-
-      <Heading variant={"h2"}>Selecciona el formato del documento</Heading>
-
-      {/* carousel? or something to select between a4,letter,oficio */}
       {/* when selected, button continuar */}
+      <Link
+        className={`mt-5 ${buttonVariants({
+          variant: "default",
+        })} w-full md:w-fit md:text-md md:py-6 md:px-12`}
+        to={"/"}
+      >
+        {" "}
+        <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
+      </Link>
     </main>
   );
 }
