@@ -7,6 +7,7 @@ export type SelectionCardProps = {
   description: string;
   recommended?: boolean;
   icon?: React.ReactNode;
+  toggleSelected?: (sizeTitle: string) => void;
 };
 
 function SelectionCard({
@@ -15,12 +16,18 @@ function SelectionCard({
   description,
   recommended,
   icon,
+  toggleSelected,
 }: SelectionCardProps) {
-  const [isSelected, setIsSelected] = useState(recommended);
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleSelected = (sizeTitle: string) => {
+    setIsSelected((prev) => !prev);
+    toggleSelected!(sizeTitle);
+  };
 
   return (
     <div
-      onClick={() => setIsSelected((prev) => !prev)}
+      onClick={() => handleSelected(title)}
       className={`${
         isSelected
           ? "ring-4 ring-primary ring-inset"
