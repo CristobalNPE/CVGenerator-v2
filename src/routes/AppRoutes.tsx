@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import Home from "@/pages/home/Home";
 import SizeSelection from "@/pages/sizeSelection/SizeSelection";
+import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function AppRoutes() {
@@ -16,6 +17,10 @@ function AppRoutes() {
         {
           path: "size",
           element: <SizeSelection />,
+        },
+        {
+          path: "template",
+          element: <TemplateSelection />,
         },
       ],
     },
