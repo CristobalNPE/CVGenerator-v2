@@ -3,12 +3,19 @@ import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { templates } from "./data";
+import { useCurriculumStore } from "@/stores/curriculum";
 
 function TemplateSelection() {
   const [selectedItem, setSelectedItem] = useState("Serio");
+  const { setTemplate } = useCurriculumStore();
+
+  useEffect(() => {
+    setTemplate(selectedItem);
+  }, [selectedItem, setTemplate]);
+
   return (
     <main className="p-4 text-center flex flex-col  items-center w-full  ">
       <Stepper />

@@ -2,12 +2,19 @@ import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectionCards from "../../components/SelectionCards/SelectionCards";
 import { cards } from "./data";
+import { useCurriculumStore } from "@/stores/curriculum";
 function SizeSelection() {
   const [selectedItem, setSelectedItem] = useState("A4");
+
+  const { setPageSize } = useCurriculumStore();
+
+  useEffect(() => {
+    setPageSize(selectedItem);
+  }, [selectedItem, setPageSize]);
 
   return (
     <main className="p-4 text-center flex flex-col  items-center w-full  ">

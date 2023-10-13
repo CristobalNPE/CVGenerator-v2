@@ -60,4 +60,7 @@
   html {
     font-family: "Figtree", sans-serif;
   }
+  .dark-input {
+    color-scheme: dark;
+  }
 }

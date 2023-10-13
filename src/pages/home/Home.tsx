@@ -4,6 +4,8 @@ import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
 function Home() {
+  
+
   return (
     <main className="p-4 text-center flex flex-col justify-center gap-12 items-center w-full">
       <section>

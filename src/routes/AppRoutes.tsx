@@ -1,4 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
+import AcademicData from "@/pages/academicData/AcademicData";
+import { AdditionalInfo } from "@/pages/additionalInfo/AdditionalInfo";
+
 import Home from "@/pages/home/Home";
 import PersonalInfo from "@/pages/personalInfo/PersonalInfo";
 import SizeSelection from "@/pages/sizeSelection/SizeSelection";
@@ -26,6 +29,14 @@ function AppRoutes() {
         {
           path: "personalInfo",
           element: <PersonalInfo />,
+        },
+        {
+          path: "additionalInfo",
+          element: <AdditionalInfo />,
+        },
+        {
+          path: "academicData",
+          element: <AcademicData />,
         },
       ],
     },

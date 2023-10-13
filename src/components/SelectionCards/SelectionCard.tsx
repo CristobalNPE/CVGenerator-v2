@@ -37,7 +37,7 @@ function SelectionCard({
             ( {cardInfo.subtitle} )
           </span>
         </Heading>
-        <p className="text-md">
+        <p className={`${isSelected ? "block" : "hidden"} sm:block text-md`}>
           {cardInfo.recommended && (
             <>
               <strong>Recomendado</strong> -{" "}
