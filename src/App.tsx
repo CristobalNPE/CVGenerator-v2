@@ -5,7 +5,7 @@ function App() {
   //TODO wrap later in AppProvider(s)
   return (
     <ThemeProvider defaultTheme="dark" storageKey="cv-ui-theme">
-      <AppRoutes />;
+      <AppRoutes />
     </ThemeProvider>
   );
 }
