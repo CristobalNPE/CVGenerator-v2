@@ -21,7 +21,7 @@ function Home() {
       <Link
         className={`${buttonVariants({
           variant: "default",
-        })} w-full md:w-fit md:text-md md:py-6 md:px-12`}
+        })} w-full md:w-fit md:text-md md:py-6 md:px-12 max-w-md`}
         to={"/size"}
       >
         {" "}
