@@ -28,7 +28,7 @@ type Inputs = {
 };
 
 function AcademicData() {
-  const { academicData, addAcademicData } = useCurriculumStore();
+  const { academicData, addAcademicData,removeAcademicData } = useCurriculumStore();
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -38,12 +38,12 @@ function AcademicData() {
     formState: { errors },
   } = useForm<Inputs>();
 
-  //!this smells
+
   const onSubmit: SubmitHandler<Inputs> = (data) => {
-    if (data.from!) {
+    if (data.from) {
       data.from = sanitizeDate(data.from);
     }
-    if (data.until!) {
+    if (data.until) {
       data.until = sanitizeDate(data.until);
     }
     addAcademicData(data);
@@ -54,7 +54,7 @@ function AcademicData() {
     if (academicData.length === 0) {
       setError("Debe ingresar al menos 1 dato académico.");
     } else {
-      navigate("/");
+      navigate("/workExperience");
     }
   };
 
@@ -68,7 +68,7 @@ function AcademicData() {
           {academicData.length === 0 ? (
             <Heading variant={"h4"}>Aun no has ingresado datos.</Heading>
           ) : (
-            <DataBoxes data={academicData} />
+            <DataBoxes data={academicData} handleRemove={removeAcademicData} />
           )}
         </section>
 
