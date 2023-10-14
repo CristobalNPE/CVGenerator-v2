@@ -44,7 +44,7 @@ export function AdditionalInfo() {
   };
 
   return (
-    <main className="p-4 text-center flex flex-col  items-center w-full  ">
+    <main className="p-4  text-center flex flex-col  items-center w-full  ">
       <Stepper />
       <Heading variant={"h2"}>Información adicional</Heading>
 
@@ -149,7 +149,7 @@ export function AdditionalInfo() {
       <Button
         type="submit"
         form="additionalData"
-        className=" mt-5 w-full md:w-fit md:text-md md:py-6 md:px-12"
+        className=" mt-5 w-full max-w-md md:w-fit md:text-md md:py-6 md:px-12"
       >
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Button>
