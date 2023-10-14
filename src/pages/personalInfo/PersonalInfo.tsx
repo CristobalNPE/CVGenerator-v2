@@ -114,7 +114,7 @@ function PersonalInfo() {
       <Button
         form="personalInfo"
         type="submit"
-        className=" mt-5  w-full md:w-fit md:text-md md:py-6 md:px-12"
+        className=" mt-5 max-w-md w-full md:w-fit md:text-md md:py-6 md:px-12"
       >
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Button>
