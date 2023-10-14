@@ -3,13 +3,14 @@ import DataBox from "./DataBox";
 
 type DataBoxesProps = {
   data: CurriculumData[];
+  handleRemove:(id:string)=>void;
 };
 
-function DataBoxes({ data }: DataBoxesProps) {
+function DataBoxes({ data,handleRemove }: DataBoxesProps) {
   return (
     <article className="flex flex-col ">
       {data.map((d) => (
-        <DataBox key={d.id} {...d} />
+        <DataBox handleRemove={handleRemove} key={d.id} {...d} />
       ))}
     </article>
   );

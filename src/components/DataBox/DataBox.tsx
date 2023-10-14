@@ -1,11 +1,19 @@
-import { CurriculumData, useCurriculumStore } from "@/stores/curriculum";
+import { CurriculumData } from "@/stores/curriculum";
 import { X } from "lucide-react";
 import { Button } from "../ui/button";
 
-type DataBoxProps = CurriculumData;
+type DataBoxProps = CurriculumData & {
+  handleRemove: (id: string) => void;
+};
 
-function DataBox({ title, description, from, until, id }: DataBoxProps) {
-  const { removeAcademicData } = useCurriculumStore();
+function DataBox({
+  title,
+  description,
+  from,
+  until,
+  id,
+  handleRemove,
+}: DataBoxProps) {
   return (
     <div className="flex justify-between items-center  ring-1 ring-secondary py-2 px-3 rounded-md ">
       <div className="flex flex-col text-left">
@@ -18,7 +26,7 @@ function DataBox({ title, description, from, until, id }: DataBoxProps) {
       </div>
 
       <Button
-        onClick={() => removeAcademicData(id)}
+        onClick={() => handleRemove(id)}
         variant={"outline"}
         size={"sm"}
         className="hover:text-destructive"
