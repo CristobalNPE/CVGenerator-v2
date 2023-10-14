@@ -25,7 +25,7 @@ function SelectionCard({
         isSelected
           ? "ring-4 ring-primary ring-inset"
           : "hover:bg-secondary opacity-90"
-      } grid grid-cols-6 max-w-lg px-3 sm:px-5 py-6 items-center rounded-lg gap-16 cursor-pointer  hover:opacity-100 transition-colors bg-muted select-none `}
+      } grid grid-cols-6 max-w-lg px-3 sm:px-5 py-5 items-center rounded-lg gap-16 cursor-pointer  hover:opacity-100 transition-colors bg-muted select-none `}
     >
       <span className={`${isSelected && "text-primary"}`}>
         {<cardInfo.icon size={48} strokeWidth={1.25} />}
