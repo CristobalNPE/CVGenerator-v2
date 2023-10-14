@@ -1,15 +1,11 @@
 import { create } from "zustand";
-
-type CurriculumData = {
+import { nanoid } from "nanoid";
+export type CurriculumData = {
+  id: string;
   title: string;
   description: string;
   from?: string;
   until?: string;
-};
-
-type ExtraData = {
-  mainTitle: string;
-  data: CurriculumData[];
 };
 
 type Curriculum = {
@@ -24,7 +20,7 @@ type Curriculum = {
   academicData: CurriculumData[];
   workExperience: CurriculumData[];
   technicalSkills: CurriculumData[];
-  otherInfo?: ExtraData[];
+  otherInfo?: CurriculumData[];
   // ......al properties
   pageSize: string;
   template: string;
@@ -37,7 +33,8 @@ type Curriculum = {
   setGithub: (fullName: string) => void;
   setLinkedIn: (fullName: string) => void;
   setAboutMe: (fullName: string) => void;
-
+  addAcademicData: (academicData: CurriculumData) => void;
+  removeAcademicData: (id: string) => void;
   setPageSize: (fullName: string) => void;
   setTemplate: (fullName: string) => void;
 };
@@ -66,7 +63,14 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
   setGithub: (github: string) => set({ github }),
   setLinkedIn: (linkedIn: string) => set({ linkedIn }),
   setAboutMe: (aboutMe: string) => set({ aboutMe }),
-
+  addAcademicData: (academicData: CurriculumData) =>
+    set((state) => ({
+      academicData: [...state.academicData, { id: nanoid(), ...academicData }],
+    })),
+  removeAcademicData: (id: string) =>
+    set((state) => ({
+      academicData: state.academicData.filter((data) => data.id !== id),
+    })),
   setPageSize: (pageSize: string) => set({ pageSize }),
   setTemplate: (template: string) => set({ template }),
 }));
