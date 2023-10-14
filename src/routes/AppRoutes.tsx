@@ -6,6 +6,7 @@ import Home from "@/pages/home/Home";
 import PersonalInfo from "@/pages/personalInfo/PersonalInfo";
 import SizeSelection from "@/pages/sizeSelection/SizeSelection";
 import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
+import WorkExperience from "@/pages/workExperience/WorkExperience";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function AppRoutes() {
@@ -37,6 +38,10 @@ function AppRoutes() {
         {
           path: "academicData",
           element: <AcademicData />,
+        },
+        {
+          path: "workExperience",
+          element: <WorkExperience />,
         },
       ],
     },
