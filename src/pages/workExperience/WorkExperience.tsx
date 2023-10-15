@@ -49,7 +49,7 @@ function WorkExperience() {
   };
 
   const handleClick = () => {
-    navigate("/");
+    navigate("/techSkills");
   };
 
   return (
