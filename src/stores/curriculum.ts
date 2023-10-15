@@ -36,6 +36,9 @@ type Curriculum = {
   removeAcademicData: (id: string) => void;
   addWorkExperience: (workExperience: CurriculumData) => void;
   removeWorkExperience: (id: string) => void;
+
+  addTechnicalSkill: (technicalSkill: CurriculumData) => void;
+  removeTechnicalSkill: (id: string) => void;
   setPageSize: (fullName: string) => void;
   setTemplate: (fullName: string) => void;
 };
@@ -84,6 +87,19 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
   removeWorkExperience: (id: string) =>
     set((state) => ({
       workExperience: state.workExperience.filter((data) => data.id !== id),
+    })),
+
+  addTechnicalSkill: (technicalSkill: CurriculumData) =>
+    set((state) => ({
+      technicalSkills: [
+        ...state.technicalSkills,
+        { id: nanoid(), ...technicalSkill },
+      ],
+    })),
+
+  removeTechnicalSkill: (id: string) =>
+    set((state) => ({
+      technicalSkills: state.technicalSkills.filter((data) => data.id !== id),
     })),
 
   setPageSize: (pageSize: string) => set({ pageSize }),
