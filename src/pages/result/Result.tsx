@@ -1,4 +1,5 @@
 import Stepper from "@/components/Stepper/Stepper";
+import SeriousTemplate from "@/components/templates/SeriousTemplate";
 import { Heading } from "@/components/typography/Heading";
 import { useCurriculumStore } from "@/stores/curriculum";
 
@@ -17,7 +18,7 @@ function Result() {
 
       <Heading variant={"h2"}>Tu CV:</Heading>
 
-      <div className="bg-white w-[595px] h-[842px] border-foreground border-2"></div>
+      <SeriousTemplate/>
       <div>
         <Heading variant={"h2"}>Datos Personales</Heading>
         <Heading variant={"h3"}>Nombre: {curriculum.fullName}</Heading>

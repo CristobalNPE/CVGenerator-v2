@@ -8,7 +8,7 @@ export type CurriculumData = {
   until?: string;
 };
 
-type Curriculum = {
+export type Curriculum = {
   fullName: string;
   phoneNumber: string;
   email: string;
