@@ -4,7 +4,9 @@ import { AdditionalInfo } from "@/pages/additionalInfo/AdditionalInfo";
 
 import Home from "@/pages/home/Home";
 import PersonalInfo from "@/pages/personalInfo/PersonalInfo";
+import Result from "@/pages/result/Result";
 import SizeSelection from "@/pages/sizeSelection/SizeSelection";
+import TechnicalSkills from "@/pages/technicalSkills/TechnicalSkills";
 import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
 import WorkExperience from "@/pages/workExperience/WorkExperience";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -42,6 +44,14 @@ function AppRoutes() {
         {
           path: "workExperience",
           element: <WorkExperience />,
+        },
+        {
+          path: "techSkills",
+          element: <TechnicalSkills />,
+        },
+        {
+          path: "result",
+          element: <Result />,
         },
       ],
     },
