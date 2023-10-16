@@ -1,3 +1,4 @@
+import Container from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -31,7 +32,7 @@ function PersonalInfo() {
   };
 
   return (
-    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
+    <Container>
       <Heading variant={"h2"}>Información personal</Heading>
 
       <form
@@ -109,7 +110,7 @@ function PersonalInfo() {
       >
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Button>
-    </main>
+    </Container>
   );
 }
 

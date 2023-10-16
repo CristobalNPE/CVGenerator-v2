@@ -1,3 +1,4 @@
+import Container from "@/components/layout/Container";
 import FullTemplate from "@/components/templates/FullTemplate";
 import SeriousTemplate from "@/components/templates/SeriousTemplate";
 import VisualTemplate from "@/components/templates/VisualTemplate";
@@ -25,7 +26,7 @@ function Result() {
   };
 
   return (
-    <main className="p-4 text-center flex flex-col  items-center w-full  ">
+    <Container>
       <Heading variant={"h2"}>Tu Curriculum: </Heading>
       <div className="my-2 flex flex-col gap-2 sm:flex-row sm:gap-10 sm:mb-5">
         <Button onClick={saveCV} variant={"secondary"}>
@@ -46,7 +47,7 @@ function Result() {
         )}
         {curriculum.template === "Completo" && <FullTemplate cv={curriculum} />}
       </div>
-    </main>
+    </Container>
   );
 }
 

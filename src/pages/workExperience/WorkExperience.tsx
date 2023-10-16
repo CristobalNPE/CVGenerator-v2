@@ -1,4 +1,5 @@
 import DataBoxes from "@/components/DataBox/DataBoxes";
+import Container from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -52,7 +53,7 @@ function WorkExperience() {
   };
 
   return (
-    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
+    <Container>
       <Heading variant={"h2"}>Experiencia Laboral</Heading>
 
       <div className=" grow flex flex-col gap-6 w-full max-w-md mt-8 ">
@@ -167,7 +168,7 @@ function WorkExperience() {
       >
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Button>
-    </main>
+    </Container>
   );
 }
 

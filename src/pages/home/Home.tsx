@@ -2,10 +2,16 @@ import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion";
 function Home() {
   return (
-    <main className="grow p-4 text-center flex flex-col justify-center gap-12 items-center w-full">
+    <motion.main
+      initial={{ scale: 0.2, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      exit={{ scale: 1, opacity: 1 }}
+      className="grow p-4 text-center flex flex-col justify-center gap-12 items-center w-full"
+    >
       <section className="">
         <Heading className="mb-3">
           Crea tu <span className="text-primary">Currículum Vitae</span> con
@@ -25,7 +31,7 @@ function Home() {
         {" "}
         <Sparkles className="mr-2" strokeWidth={2} /> Comenzar!
       </Link>
-    </main>
+    </motion.main>
   );
 }
 

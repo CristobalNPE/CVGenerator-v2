@@ -1,4 +1,5 @@
 import SelectionCards from "@/components/SelectionCards/SelectionCards";
+import Container from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
 import { useCurriculumStore } from "@/stores/curriculum";
@@ -16,7 +17,7 @@ function TemplateSelection() {
   }, [selectedItem, setTemplate]);
 
   return (
-    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
+    <Container>
       <Heading variant={"h2"}>Seleccione una plantilla</Heading>
 
       <div className="grow">
@@ -36,7 +37,7 @@ function TemplateSelection() {
         {" "}
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Link>
-    </main>
+    </Container>
   );
 }
 

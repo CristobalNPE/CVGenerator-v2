@@ -1,7 +1,6 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import { Suspense } from "react";
 import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
-
 function MainLayout() {
   const location = useLocation();
 

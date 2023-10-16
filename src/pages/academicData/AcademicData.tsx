@@ -1,4 +1,5 @@
 import DataBoxes from "@/components/DataBox/DataBoxes";
+import Container from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,7 +28,8 @@ type Inputs = {
 };
 
 function AcademicData() {
-  const { academicData, addAcademicData,removeAcademicData } = useCurriculumStore();
+  const { academicData, addAcademicData, removeAcademicData } =
+    useCurriculumStore();
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -36,7 +38,6 @@ function AcademicData() {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     if (data.from) {
@@ -58,8 +59,7 @@ function AcademicData() {
   };
 
   return (
-    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
-     
+    <Container>
       <Heading variant={"h2"}>Datos Académicos</Heading>
 
       <div className=" grow flex flex-col gap-6 w-full max-w-md mt-8 ">
@@ -172,7 +172,7 @@ function AcademicData() {
       >
         <ArrowRight className="mr-2 " strokeWidth={3} /> Siguiente
       </Button>
-    </main>
+    </Container>
   );
 }
 
