@@ -133,9 +133,9 @@ export function AdditionalInfo() {
                     "La presentación debe contener al menos 200 caracteres.",
                 },
                 maxLength: {
-                  value: 400,
+                  value: 600,
                   message:
-                    "La presentación no puede contener mas de 400 caracteres",
+                    "La presentación no puede contener mas de 600 caracteres",
                 },
               })}
             />
