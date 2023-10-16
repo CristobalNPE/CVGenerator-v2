@@ -1,12 +1,12 @@
-import { ArrowBigLeft, RefreshCw, Save, Settings2 } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { useTheme } from "@/providers/ThemeProvider";
+import { ArrowBigLeft, RefreshCw, Save, Settings2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../ui/button";
 function NavigationBar() {
   const { theme, setTheme } = useTheme();
 
