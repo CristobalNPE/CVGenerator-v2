@@ -1,5 +1,4 @@
 import DataBoxes from "@/components/DataBox/DataBoxes";
-import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,7 +59,7 @@ function AcademicData() {
 
   return (
     <main className=" p-4 text-center flex flex-col  items-center w-full  ">
-      <Stepper />
+     
       <Heading variant={"h2"}>Datos Académicos</Heading>
 
       <div className=" grow flex flex-col gap-6 w-full max-w-md mt-8 ">

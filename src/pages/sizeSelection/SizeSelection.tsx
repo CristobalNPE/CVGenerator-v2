@@ -1,12 +1,11 @@
-import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
+import { useCurriculumStore } from "@/stores/curriculum";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SelectionCards from "../../components/SelectionCards/SelectionCards";
 import { cards } from "./data";
-import { useCurriculumStore } from "@/stores/curriculum";
 function SizeSelection() {
   const [selectedItem, setSelectedItem] = useState("A4");
 
@@ -18,7 +17,7 @@ function SizeSelection() {
 
   return (
     <main className="p-4 text-center flex flex-col  items-center w-full  ">
-      <Stepper />
+      
       <Heading variant={"h2"}>Escoja el formato de papel</Heading>
 
       <div className="grow">

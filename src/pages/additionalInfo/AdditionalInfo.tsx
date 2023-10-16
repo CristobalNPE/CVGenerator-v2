@@ -1,4 +1,3 @@
-import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,7 +44,7 @@ export function AdditionalInfo() {
 
   return (
     <main className="p-4  text-center flex flex-col  items-center w-full  ">
-      <Stepper />
+     
       <Heading variant={"h2"}>Información adicional</Heading>
 
       <form
