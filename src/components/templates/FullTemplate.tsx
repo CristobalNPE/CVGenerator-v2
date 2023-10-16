@@ -72,7 +72,7 @@ function FullTemplate({ cv }: TemplateProps) {
           <h4 className="text-lg font-regular text-left">{cv.title}</h4>
         )}
         <hr className="opacity-10 my-2" />
-        <p className="text-sm text-left">{cv.aboutMe}</p>
+        <p className="text-xs text-left">{cv.aboutMe}</p>
 
         <section className="py-4 text-sm">
           <h2 className="text-lg uppercase font-thin mb-5 bg-zinc-800 text-white rounded-full text-center">
