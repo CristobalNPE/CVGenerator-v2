@@ -16,7 +16,7 @@ function DataBox({
 }: DataBoxProps) {
   return (
     <div className="flex justify-between items-center  ring-1 ring-secondary py-2 px-3 rounded-md ">
-      <div className="flex flex-col text-left">
+      <div className="flex flex-col text-left w-[60%]">
         <p className="text-sm font-semibold ">{title}</p>
         <p className="text-sm font-thin">{description}</p>
       </div>
