@@ -52,7 +52,7 @@ function WorkExperience() {
   };
 
   return (
-    <main className=" p-4 text-center flex flex-col  items-center w-full  ">
+    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
       <Heading variant={"h2"}>Experiencia Laboral</Heading>
 
       <div className=" grow flex flex-col gap-6 w-full max-w-md mt-8 ">

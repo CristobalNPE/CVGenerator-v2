@@ -1,4 +1,3 @@
-import Stepper from "@/components/Stepper/Stepper";
 import { Heading } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,8 +38,8 @@ function PersonalInfo() {
   };
 
   return (
-    <main className="p-4 text-center flex flex-col  items-center w-full  ">
-      <Stepper />
+    <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
+     
       <Heading variant={"h2"}>Información personal</Heading>
 
       <form
