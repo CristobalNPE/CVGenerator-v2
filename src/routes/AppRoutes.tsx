@@ -5,6 +5,7 @@ import { AdditionalInfo } from "@/pages/additionalInfo/AdditionalInfo";
 import Home from "@/pages/home/Home";
 import PersonalInfo from "@/pages/personalInfo/PersonalInfo";
 import Result from "@/pages/result/Result";
+import SavedCv from "@/pages/savedCv/SavedCv";
 import SizeSelection from "@/pages/sizeSelection/SizeSelection";
 import TechnicalSkills from "@/pages/technicalSkills/TechnicalSkills";
 import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
@@ -52,6 +53,10 @@ function AppRoutes() {
         {
           path: "result",
           element: <Result />,
+        },
+        {
+          path: "saved",
+          element: <SavedCv />,
         },
       ],
     },

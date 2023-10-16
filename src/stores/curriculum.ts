@@ -9,6 +9,8 @@ export type CurriculumData = {
 };
 
 export type Curriculum = {
+  id: string;
+  creationDate: string;
   fullName: string;
   phoneNumber: string;
   email: string;
@@ -24,6 +26,8 @@ export type Curriculum = {
   pageSize: string;
   template: string;
   //functions
+  setAllData: (data: Curriculum) => void;
+  setCreationDate: (creationDate: string) => void;
   setFullName: (fullName: string) => void;
   setPhoneNumber: (fullName: string) => void;
   setEmail: (fullName: string) => void;
@@ -44,6 +48,8 @@ export type Curriculum = {
 };
 
 export const useCurriculumStore = create<Curriculum>()((set) => ({
+  id: nanoid(),
+  creationDate: "",
   fullName: "",
   phoneNumber: "",
   email: "",
@@ -59,6 +65,8 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
   pageSize: "",
   template: "",
 
+  setAllData: (data: Curriculum) => set(data),
+  setCreationDate: (creationDate: string) => set({ creationDate }),
   setFullName: (fullName: string) => set({ fullName }),
   setPhoneNumber: (phoneNumber: string) => set({ phoneNumber }),
   setEmail: (email: string) => set({ email }),
