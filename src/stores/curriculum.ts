@@ -69,7 +69,7 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
   setAboutMe: (aboutMe: string) => set({ aboutMe }),
   addAcademicData: (academicData: CurriculumData) =>
     set((state) => ({
-      academicData: [...state.academicData, { id: nanoid(), ...academicData }],
+      academicData: [...state.academicData, { ...academicData, id: nanoid() }],
     })),
   removeAcademicData: (id: string) =>
     set((state) => ({
@@ -80,7 +80,7 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
     set((state) => ({
       workExperience: [
         ...state.workExperience,
-        { id: nanoid(), ...workExperience },
+        { ...workExperience, id: nanoid() },
       ],
     })),
 
@@ -93,7 +93,7 @@ export const useCurriculumStore = create<Curriculum>()((set) => ({
     set((state) => ({
       technicalSkills: [
         ...state.technicalSkills,
-        { id: nanoid(), ...technicalSkill },
+        { ...technicalSkill, id: nanoid() },
       ],
     })),
 
