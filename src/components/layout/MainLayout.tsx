@@ -1,7 +1,3 @@
-// type MainLayoutProps = {
-//   children: React.ReactNode;
-// };
-
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
 import { Suspense } from "react";
 import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
