@@ -7,8 +7,8 @@ function Home() {
   
 
   return (
-    <main className="p-4 text-center flex flex-col justify-center gap-12 items-center w-full">
-      <section>
+    <main className="grow p-4 text-center flex flex-col justify-center gap-12 items-center w-full">
+      <section className="">
         <Heading className="mb-3">
           Crea tu <span className="text-primary">Currículum Vitae</span> con
           facilidad
