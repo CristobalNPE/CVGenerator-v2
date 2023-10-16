@@ -12,7 +12,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { sanitizeDate } from "@/lib/utils";
 import { useCurriculumStore } from "@/stores/curriculum";
 import { ArrowRight, Plus } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
