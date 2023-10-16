@@ -12,14 +12,20 @@ function NavigationBar() {
 
   const navigate = useNavigate();
 
-
+  const handleBack = () => {
+    navigate(-1);
+  };
   const handleToSavedCvs = () => {
     navigate("/saved");
   };
 
   return (
     <nav className="my-4">
-      <Button variant={"secondary"} className="rounded-l-full p-6">
+      <Button
+        onClick={handleBack}
+        variant={"secondary"}
+        className="rounded-l-full p-6"
+      >
         <ArrowBigLeft className="mr-2" /> Atrás
       </Button>
 
@@ -44,7 +50,11 @@ function NavigationBar() {
               <RefreshCw className="mr-2" /> Cambiar tema
             </Button>
 
-            <Button onClick={handleToSavedCvs} variant={"secondary"} className="py-7">
+            <Button
+              onClick={handleToSavedCvs}
+              variant={"secondary"}
+              className="py-7"
+            >
               <Save className="mr-2" /> CV Guardados
             </Button>
           </div>

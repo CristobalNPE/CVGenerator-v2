@@ -27,6 +27,7 @@ function Home() {
         {" "}
         <Sparkles className="mr-2" strokeWidth={2} /> Comenzar!
       </Link>
+    
     </main>
   );
 }
