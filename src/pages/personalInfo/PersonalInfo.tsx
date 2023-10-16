@@ -15,12 +15,6 @@ type Inputs = {
 };
 
 function PersonalInfo() {
-  const curriculum = useCurriculumStore();
-  useEffect(() => {
-    console.log(curriculum);
-  }, [curriculum]);
-
-  //////////////////
   const { setFullName, setEmail, setPhoneNumber } = useCurriculumStore();
   const {
     register,
@@ -39,7 +33,6 @@ function PersonalInfo() {
 
   return (
     <main className="grow p-4 text-center flex flex-col  items-center w-full  ">
-     
       <Heading variant={"h2"}>Información personal</Heading>
 
       <form
