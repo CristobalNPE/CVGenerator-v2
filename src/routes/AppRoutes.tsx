@@ -1,4 +1,5 @@
 import MainLayout from "@/components/layout/MainLayout";
+import ErrorPage from "@/pages/ErrorPage";
 import AcademicData from "@/pages/academicData/AcademicData";
 import { AdditionalInfo } from "@/pages/additionalInfo/AdditionalInfo";
 
@@ -17,6 +18,7 @@ function AppRoutes() {
     {
       path: "/",
       element: <MainLayout />,
+      errorElement:<ErrorPage/>,
       children: [
         {
           index: true,

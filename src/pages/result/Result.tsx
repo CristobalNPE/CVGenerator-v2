@@ -8,14 +8,15 @@ import { Download, Save } from "lucide-react";
 
 function Result() {
   const curriculum = useCurriculumStore();
-  //TODO: MAKE THE MENU FOR TOGGLING DARK MODE AND ACCESS SAVED CVs
-  //TODO: MAKE IT SO IT CANT SKIP STEPS
+
+  //! TODO: MAKE IT SO IT CANT SKIP STEPS
+
+  //MAYBE MAKE PERSONAL AND ADDITIONAL INFO TO MAINTAIN THE VALUE OF ITS INPUTS WHEN I GO BACK
   //TODO: ADD ANIMATION BETWEEN PAGES
   //TODO: WHEN LEARN NODE, SEND THE TEMPLATES HTML TO GET A PDF
 
   const saveCV = () => {
     const currentDateTime = new Date().toLocaleString();
-    console.log(currentDateTime);
     curriculum.setCreationDate(currentDateTime);
     localStorage.setItem(
       `cvCreator-${curriculum.id}`,
