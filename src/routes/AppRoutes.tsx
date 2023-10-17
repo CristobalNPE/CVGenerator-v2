@@ -13,56 +13,58 @@ import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
 import WorkExperience from "@/pages/workExperience/WorkExperience";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
+export const routes = [
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "size",
+        element: <SizeSelection />,
+      },
+      {
+        path: "template",
+        element: <TemplateSelection />,
+      },
+      {
+        path: "personalInfo",
+        element: <PersonalInfo />,
+      },
+      {
+        path: "additionalInfo",
+        element: <AdditionalInfo />,
+      },
+      {
+        path: "academicData",
+        element: <AcademicData />,
+      },
+      {
+        path: "workExperience",
+        element: <WorkExperience />,
+      },
+      {
+        path: "techSkills",
+        element: <TechnicalSkills />,
+      },
+      {
+        path: "result",
+        element: <Result />,
+      },
+      {
+        path: "saved",
+        element: <SavedCv />,
+      },
+    ],
+  },
+];
+
 function AppRoutes() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout />,
-      errorElement:<ErrorPage/>,
-      children: [
-        {
-          index: true,
-          element: <Home />,
-        },
-        {
-          path: "size",
-          element: <SizeSelection />,
-        },
-        {
-          path: "template",
-          element: <TemplateSelection />,
-        },
-        {
-          path: "personalInfo",
-          element: <PersonalInfo />,
-        },
-        {
-          path: "additionalInfo",
-          element: <AdditionalInfo />,
-        },
-        {
-          path: "academicData",
-          element: <AcademicData />,
-        },
-        {
-          path: "workExperience",
-          element: <WorkExperience />,
-        },
-        {
-          path: "techSkills",
-          element: <TechnicalSkills />,
-        },
-        {
-          path: "result",
-          element: <Result />,
-        },
-        {
-          path: "saved",
-          element: <SavedCv />,
-        },
-      ],
-    },
-  ]);
+  const router = createBrowserRouter(routes);
 
   return <RouterProvider router={router} />;
 }
