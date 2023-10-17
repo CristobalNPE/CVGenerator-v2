@@ -1,16 +1,16 @@
 import MainLayout from "@/components/layout/MainLayout";
 import ErrorPage from "@/pages/ErrorPage";
-import AcademicData from "@/pages/academicData/AcademicData";
-import { AdditionalInfo } from "@/pages/additionalInfo/AdditionalInfo";
+import AcademicData from "@/pages/AcademicData";
+import { AdditionalInfo } from "@/pages/AdditionalInfo";
 
-import Home from "@/pages/home/Home";
-import PersonalInfo from "@/pages/personalInfo/PersonalInfo";
-import Result from "@/pages/result/Result";
-import SavedCv from "@/pages/savedCv/SavedCv";
-import SizeSelection from "@/pages/sizeSelection/SizeSelection";
-import TechnicalSkills from "@/pages/technicalSkills/TechnicalSkills";
-import TemplateSelection from "@/pages/templateSelection/TemplateSelection";
-import WorkExperience from "@/pages/workExperience/WorkExperience";
+import Home from "@/pages/Home";
+import PersonalInfo from "@/pages/PersonalInfo";
+import Result from "@/pages/Result";
+import SavedCv from "@/pages/SavedCv";
+import SizeSelection from "@/pages/SizeSelection";
+import TechnicalSkills from "@/pages/TechnicalSkills";
+import TemplateSelection from "@/pages/TemplateSelection";
+import WorkExperience from "@/pages/WorkExperience";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 export const routes = [

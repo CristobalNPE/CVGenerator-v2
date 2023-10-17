@@ -1,3 +1,4 @@
+import SelectionCards from "@/components/SelectionCards/SelectionCards";
 import Container from "@/components/layout/Container";
 import { Heading } from "@/components/typography/Heading";
 import { Button } from "@/components/ui/button";
@@ -5,28 +6,28 @@ import { useCurriculumStore } from "@/stores/curriculum";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import SelectionCards from "../../components/SelectionCards/SelectionCards";
-import { cards } from "./data";
-function SizeSelection() {
-  const [selectedItem, setSelectedItem] = useState("A4");
+import { templates } from "@/data";
 
-  const { setPageSize } = useCurriculumStore();
+function TemplateSelection() {
+  const [selectedItem, setSelectedItem] = useState("Serio");
+  const { setTemplate } = useCurriculumStore();
+
   const navigate = useNavigate();
 
   const handleNextButton = () => {
-    setPageSize(selectedItem);
-    navigate("/template");
+    setTemplate(selectedItem);
+    navigate("/personalInfo");
   };
 
   return (
     <Container>
-      <Heading variant={"h2"}>Escoja el formato de papel</Heading>
+      <Heading variant={"h2"}>Seleccione una plantilla</Heading>
 
       <div className="grow">
         <SelectionCards
           selectedItem={selectedItem}
           setSelectedItem={setSelectedItem}
-          cards={cards}
+          cards={templates}
         />
       </div>
 
@@ -40,4 +41,4 @@ function SizeSelection() {
   );
 }
 
-export default SizeSelection;
+export default TemplateSelection;
