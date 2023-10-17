@@ -1,8 +1,8 @@
 import { Heading } from "@/components/typography/Heading";
 import { buttonVariants } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 function Home() {
   return (
     <motion.main
