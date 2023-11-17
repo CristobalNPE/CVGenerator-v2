@@ -1,27 +1,27 @@
-# React + TypeScript + Vite
+# CV Creator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+CV Creator is one of my initial projects, designed to streamline the creation of a curriculum vitae by prompting users for information and generating customized CVs in various templates. The tool aims to simplify and expedite the CV creation process, offering templates that cater to different preferences — from minimalistic designs to more elaborate and visually appealing formats.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+To set up the project, follow these steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Install dependencies with npm install.
+2. Run the application using npm run dev.
+3. Access it through your web browser at localhost.
 
-- Configure the top-level `parserOptions` property like this:
+## What I Learned
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+During the development of this project, I honed my skills in state management, leveraging the Zustand library. Additionally, I refined my use of TailwindCSS with ShadowCSS and delved into the world of TypeScript, enhancing my understanding of type-safe coding practices.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Future Plans
+
+Looking ahead, the project's roadmap includes the following enhancements:
+
+- Improve date pickers and streamline the application flow for a more user-friendly experience.
+- Implement a backend with user accounts, granting users access to their created curriculums.
+- Provide options for downloading the curriculum as a PDF or sharing it seamlessly.
+  
+Feel free to reach out if you have any questions or suggestions!
