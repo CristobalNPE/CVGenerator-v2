@@ -14,7 +14,7 @@ To set up the project, follow these steps:
 
 ## What I Learned
 
-During the development of this project, I honed my skills in state management, leveraging the Zustand library. Additionally, I refined my use of TailwindCSS with ShadowCSS and delved into the world of TypeScript, enhancing my understanding of type-safe coding practices.
+During the development of this project, I honed my skills in state management, leveraging the Zustand library. Additionally, I refined my use of TailwindCSS with the ShadCN ui library and delved into the world of TypeScript, enhancing my understanding of type-safe coding practices.
 
 ## Future Plans
 
